@@ -12,17 +12,18 @@
             crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
         <div class="container">
             <nav class="navbar navbar-expand fixed-top bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand text-white" href="#">The Restaurant of Bread</a>
+                  <a class="navbar-brand text-white" href="#">
+                    <img src="images/logobread2.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    The Restaurant of Bread</a>
                     <ul class="navbar-nav nav-tabs">
                         <li class="nav-item mx-3">
                             <a class="nav-link text-white" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item mx-3">
+                        <li class="nav-item active mx-3">
                             <a class="nav-link text-white" href="menu.html">Menu</a>
                         </li>
                         <li class="nav-item mx-3">
@@ -57,41 +58,54 @@
                     </div>
                     <div class="col-6">
                         <header><h1 class="h1 text-white">The Menu</h1></header>
+                        <h2 class="h2">Breakfast Menu</h2>
                         <div class="mb-3">
-                            <label for="FoodBread1" class="form-label">Baguette</label>
-                            <input type="checkbox" class="form-check-input" id="FoodBread1">
-                          </div>
-                          <div class="mb-3">
-                            <label for="FoodBread2" class="form-label">Belgian Waffle</label>
-                            <input type="checkbox" class="form-check-input" id="FoodBread2">
-                          </div>
-                          <div class="mb-3">
-                            <label for="FoodBread3" class="form-label">Brioche</label>
-                            <input type="checkbox" class="form-check-input" id="FoodBread3">
-                          </div>
+                          <label for="FoodBread2" class="form-label">Belgian Waffle</label>
+                          <input type="checkbox" class="form-check-input" id="FoodBread2">
+                          <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $128</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="FoodBread9" class="form-label">Bagel</label>
+                          <input type="checkbox" class="form-check-input" id="FoodBread9">
+                          <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $256</div>
+                        </div>
+                        <h2 class="h2">Appetizers</h2>
+                        <div class="mb-3">
+                          <label for="FoodBread5" class="form-label">White Bread</label>
+                          <input type="checkbox" class="form-check-input" id="FoodBread5">
+                          <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $2048</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="FoodBread6" class="form-label">Black Bread</label>
+                          <input type="checkbox" class="form-check-input" id="FoodBread6">
+                          <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $4096</div>
+                        </div>
+                        <h2 class="h2">Main Courses</h2>
+                        <div class="mb-3">
+                          <label for="FoodBread1" class="form-label">Baguette</label>
+                          <input type="checkbox" class="form-check-input" id="FoodBread1">
+                          <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $64</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="FoodBread3" class="form-label">Brioche</label>
+                          <input type="checkbox" class="form-check-input" id="FoodBread3">
+                          <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $512</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="quantity">Bread Rolls</label>
+                          <input type="number" id="quantity" name="quantity" min="0" max="50">
+                          <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $8192 each</div>
+                        </div>                    
+                        <h2 class="h2">Desserts</h2>
                           <div class="mb-3">
                             <label for="FoodBread4" class="form-label">Carrot Bread</label>
                             <input type="checkbox" class="form-check-input" id="FoodBread4">
-                          </div>
-                          <div class="mb-3">
-                            <label for="FoodBread5" class="form-label">White Bread</label>
-                            <input type="checkbox" class="form-check-input" id="FoodBread5">
-                          </div>
-                          <div class="mb-3">
-                            <label for="FoodBread6" class="form-label">Black Bread</label>
-                            <input type="checkbox" class="form-check-input" id="FoodBread6">
-                          </div>
-                          <div class="mb-3">
-                            <label for="FoodBread7" class="form-label">Bread Rolls</label>
-                            <input type="checkbox" class="form-check-input" id="FoodBread7">
+                            <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $1024</div>
                           </div>
                           <div class="mb-3">
                             <label for="FoodBread8" class="form-label">Corn Bread</label>
                             <input type="checkbox" class="form-check-input" id="FoodBread8">
-                          </div>
-                          <div class="mb-3">
-                            <label for="FoodBread1" class="form-label">Baguette</label>
-                            <input type="checkbox" class="form-check-input" id="FoodBread1">
+                            <div class="form-text text-white-50">Description: Probably bread, we hope.<br>Price: $16384</div>
                           </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>

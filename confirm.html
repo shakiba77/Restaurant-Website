@@ -16,42 +16,35 @@
 
     <body>
         <div class="container">
-            <nav class="navbar navbar-expand fixed-top bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand text-white" href="#">
-                        <img src="images/logobread2.jpg" alt="Logo" width="30" height="24"
-                            class="d-inline-block align-text-top">
-                        The Restaurant of Bread</a>
-                    <ul class="navbar-nav nav-tabs">
-                        <li class="nav-item mx-3">
-                            <a class="nav-link text-white" href="index.html"><i class="bi bi-house-door-fill"></i>
-                                Home</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link text-white" href="menu.html"><i class="bi bi-basket-fill"></i> Menu</a>
-                        </li>
-                        <li class="nav-item active mx-3">
-                            <a class="nav-link text-white" href="about.html"><i class="bi bi-info-circle-fill"></i>
-                                About</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <br><br><br>
-            <div class="row">
-                <div class="col-md-6 col-12">
-                    <img class="img-fluid" src="images/image22.jpg">
-                </div>
-                <div class="col-md-6 col-12">
-                    <h1 class="h1 text-white">Our History</h1>
-                    <p class="text-white"> The Restaurant of Bread has had a long, and difficult history, thousands have
-                        refuted our role in the future of humanity. For as long as we have existed, The Bread Man has
-                        been at the forefront of our battle, he will never surrender, he will never forget, and nor
-                        shall he lose our fight. Now, we have been forced to downsize, even if the world must learn of
-                        the truth. If you buy from us, The Restaurant of Bread, and The Bread Man, you will be freed
-                        from the dread of this Earth, and that is our pledge.<br><br>Praise the man of bread,<br>Praise
-                        The Bread Man.</p>
-                </div>
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand fixed-top bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white" href="#">
+                            <img src="images/logobread2.jpg" alt="Logo" width="30" height="24"
+                                class="d-inline-block align-text-top">
+                            The Restaurant of Bread</a>
+                        <ul class="navbar-nav nav-tabs">
+                            <li class="nav-item active mx-3">
+                                <a class="nav-link text-white" href="index.html"><i class="bi bi-house-door-fill"></i>
+                                    Home</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-white" href="menu.html"><i class="bi bi-basket-fill"></i>
+                                    Menu</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-white" href="about.html"><i class="bi bi-info-circle-fill"></i>
+                                    About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <br><br><br>
+                <div class="row container-fluid">
+                    <div class="text-white" id="results">
+
+                    </div>
+                        </div>
                 <div class="container">
                     <footer class="py-3 my-4">
                         <ul class="nav justify-content-center mt-auto border-bottom pb-3 mb-3">
@@ -73,6 +66,20 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                const searchParams = new URLSearchParams(window.location.search);
+                const results = document.getElementById("results")
+                let resultshtml = ""
+                // Iterating the search parameters
+                for (const p of searchParams) {
+                    resultshtml += `<p>${p}</p>`
+                    console.log(p);
+                }
+                results.innerHTML = resultshtml
+
+            });
+        </script>
     </body>
 
     </html>

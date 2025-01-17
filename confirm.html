@@ -24,7 +24,7 @@
                                 class="d-inline-block align-text-top">
                             The Restaurant of Bread</a>
                         <ul class="navbar-nav nav-tabs">
-                            <li class="nav-item active mx-3">
+                            <li class="nav-item mx-3">
                                 <a class="nav-link text-white" href="index.html"><i class="bi bi-house-door-fill"></i>
                                     Home</a>
                             </li>
@@ -75,8 +75,11 @@
                 let resultshtml = ""
                 // Iterating the search parameters
                 for (const p of searchParams) {
-                    resultshtml += `<p>${p[1]}</p>`
-                    console.log(p[1]);
+                    if (p[0] == "Address") {
+                        resultshtml += `<p class="h3 m-3 text-warning">${p[1]}</p>`
+                    } else {
+                        resultshtml += `<p>${p}</p>`
+                    }
                 }
                 results.innerHTML = resultshtml
 
